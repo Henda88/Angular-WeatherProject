@@ -1,0 +1,115 @@
+.newbody{
+
+  background: url('./../../assets/image/images.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        max-height: 100%;
+        min-height: 100vh;
+}
+
+.row1 {
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: 0px;
+  margin-left: -15px
+}
+
+fieldset[_ngcontent-c1][_ngcontent-c1] {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: #06060642;
+  color: white;
+  font-family: 'Bai Jamjuree' !important;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #fff;
+  background-color: #53575a9c;
+  font-family: 'Bai Jamjuree' !important;
+}
+
+.nav-pills .nav-link {
+  border-radius: .25rem;
+  color: white;
+}
+
+.bg-dark {
+  background-color: #343a4096!important;
+}
+
+.text-dark {
+  color: #1f8af1!important;
+  font-family: 'Bai Jamjuree' !important;
+  font-size: 18px;
+}
+
+.bg-warning {
+  background-color: #1d1d1c6e!important;
+  font-family: monospace;
+  font-family: 'Bai Jamjuree' !important;
+}
+
+.col {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  padding: 14px;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+  height: 78px;
+}
+
+.col-sm-2 {
+  -ms-flex: 0 0 16.666667%;
+  flex: 0 0 16.666667%;
+  max-width: 16.666667%;
+  margin-top: 25px;
+}
+.withdicon {
+  width:100px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0rem;
+}
+
+.col[_ngcontent-c1][_ngcontent-c1] {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+  margin-top: 10px;
+  margin-left: 29px;
+  padding-right: 39px;
+}
+
+iframe{
+
+  border: 0;
+
+}
+
+.btn-outline-success {
+  color: #f5f7f5;
+  background-color: #28a745;
+  background-image: none;
+  border-color: #28a745;
+}
+
+.myfieldset {
+  font-size: 50px;
+  font-family: 'Bai Jamjuree' !important;
+  height: 454px;
+}
+.bg-secondary{
+  background-color: #2b2c2d87!important;
+}
