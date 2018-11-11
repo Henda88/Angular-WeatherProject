@@ -98,18 +98,52 @@ iframe{
 
 }
 
-.btn-outline-success {
+.btn-outline-success[_ngcontent-c1] {
   color: #f5f7f5;
-  background-color: #28a745;
+  background-color: #eacb31;
   background-image: none;
-  border-color: #28a745;
+  border-color: #eacb31;
 }
 
 .myfieldset {
   font-size: 50px;
   font-family: 'Bai Jamjuree' !important;
-  height: 454px;
 }
 .bg-secondary{
   background-color: #2b2c2d87!important;
+}
+.navbar-collapse[_ngcontent-c1][_ngcontent-c1] {
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
+  padding-left: 19rem;
+}
+img[_ngcontent-c1] {
+  vertical-align: middle;
+  border-style: none;
+  height: 78px;
+  margin-left: 1rem;
+}
+
+.mt-lg-0, .my-lg-0 {
+  margin-top: 0!important;
+  margin-right: 18rem;
+}
+.mt-lg-0[_ngcontent-c1], .my-lg-0[_ngcontent-c1] {
+  margin-top: 0!important;
+  margin-right: 12rem;
+}
+iframe{
+
+  width: 450px;
+  height: 450px;
+
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+  margin-top: 67px;
+  margin-bottom: 55px;
 }

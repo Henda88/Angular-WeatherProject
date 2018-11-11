@@ -4,6 +4,9 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { DashbordComponent } from './dashbord/dashbord.component';
+import { HistoryComponent} from './history/history.component';
+import { from } from 'rxjs';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
    {
@@ -23,6 +26,13 @@ const routes: Routes = [
 {
   path: 'dashbord',
   component: DashbordComponent,
+  canActivate : [AuthGuard]
+},
+
+{
+  path: 'history',
+  component: HistoryComponent,
+  canActivate : [AuthGuard]
 }
 ];
 

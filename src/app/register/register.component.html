@@ -1,107 +1,114 @@
-<div class="inventory-body"></div>
-    <!---------------------------- header ------------------------------------------>
+<div class="inventory-body">
 
-    <div style="margin-top:44px;" class="container text-center">
+  <!--------------------------------header------------------------------------------->
+  <div style="font-family: 'Bai Jamjuree' !important; color:white" class="container">
 
-        <div class="row">
+    <div class="row">
 
+      <div class="col text-center">
+
+        <h2><strong>Weather World</strong></h2>
+      </div>
+
+      <div class="col">
+
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" style="font-size: 13px;">
+          <div class="row">
             <div class="col">
+              <input type="text" formControlName="email" id="inputmail" placeholder="User Name" />
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label" for="defaultCheck1">
+                  Remember me
+                </label>
+              </div>
 
-                <h2>Weatherforecast.tn</h2>
+            </div>
+            <div class="col">
+              <input type="password" formControlName="password" id="inputPassword" placeholder="Password" />
+              <label class="form-check-label" for="defaultCheck1">Forgot password ?</label>
             </div>
 
             <div class="col">
-
-                <form>
-                    <div class="row">
-                        <div class="col">
-                            <input type="text" class="inputUserName" placeholder="User Name">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                <label class="form-check-label" for="defaultCheck1">
-                                    Remember me
-                                </label>
-                            </div>
-
-                        </div>
-                        <div class="col">
-                            <input type="password" class="inputPassword" placeholder="Password">
-                            <h6>Forgot password ? </h6>
-                        </div>
-
-
-                        <div class="col">
-                            <button type="button" class="btn btn-default">Login</button><br>
-                        </div>
-                    </div>
-
-                </form>
-
+              <button type="button" class="btn btn-default">Login</button><br>
             </div>
-        </div>
+          </div>
+
+        </form>
+
+      </div>
     </div>
-
+  </div>
   <div class="lineheader"></div>
 
-    <!----------------------------body ------------------------------------------>
+  <!--------------------------------container---------------------------------------------->
 
-    <div class="container">
+  <div class="container" style="color:white">
 
-        <div class="row">
-            <div class="col-sm">
+    <div class="row">
+      <div class="col-sm">
 
-                <h1>Follow your intrests</h1>
+        <h1><strong>Follow your intrests</strong></h1>
 
-                <p>Instant updates from your friends, industry exports, favorite,
-                    celebrities, and what's happing around the word.</p>
+        <h5 class="bg-light">Instant updates from your friends, industry exports, favorite,
+          celebrities, and what's happing around the word.</h5>
 
+      </div>
+      <div class="col-sm">
+
+        <h3><strong>New to site ?</strong><span style="font-size: 20px">join today ! </span> </h3>
+
+        <form id="myform" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <div class="form-group row">
+            <div class="col-sm-10">
+              <input type="text" formControlName="fullName" class="form-control" id="inputFullName" [ngClass]="{ 'is-invalid': submitted && f.fullName.errors }" placeholder="Full Name" />
+              <div *ngIf="submitted && f.fullName.errors" class="invalid-feedback">
+                  <div *ngIf="f.fullName.errors.required">Name is required</div>
+              </div>
             </div>
-            <div class="col-sm">
-
-                <h3>New to site ?<span style="font-size: 20px">join today ! </span> </h3>
-
-                <form id="myform">
-                    <div class="form-group row">
-                        <div class="col-sm-10">
-                            <input type="email" class="form-control" id="inputname3" placeholder="Full Name">
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <div class="col-sm-10">
-                            <input type="email" class="form-control" id="inputname3" placeholder="Email">
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <div class="col-sm-10">
-                            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-                        </div>
-                    </div>
-                </form>
-
-                <div class="row text-center">
-                    <div class="col-sm-10">
-                        <button type="button" class="btn btn-warning">Register</button><br>
-                    </div>
-                </div>  
-
           </div>
-    </div>
-</div>
-           
-  <!---------------------------- footer ------------------------------------------>
 
+          <div class="form-group row">
+            <div class="col-sm-10">
+              <input type="email" formControlName="email" class="form-control" [(ngModel)]="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" placeholder="Email"/>
+              <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                  <div *ngIf="f.email.errors.required">Email is required</div>
+                  <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="col-sm-10">
+              <input type="password" formControlName="password" class="form-control" placeholder="Password" [(ngModel)]="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+              <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                  <div *ngIf="f.password.errors.required">Password is required</div>
+                  <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <div class="row text-center">
+          <div class="col-sm-10">
+            <button type="button" class="btn btn-warning" (click)="onSubmit()" (click)="signup()">Register</button><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="linefooter"></div>
 
+  <!--------------------------------footer-------------------------------------------->
+
   <div class="footer">
-      <div class="container text-center">
-          <p id="p2">Copy right 2018 ©
-               <a href="#"><strong>weatherforecast.tn</strong></a>
-                All right reserved.
-              Developed by 
-              <a href="#"><strong>5 Points The Talent Pool</strong></a> 
-          </p>
-      </div>
+    <div class="container text-center" style="color: #eceef1; font-family: 'Bai Jamjuree' !important">
+      <p id="p2">Copy right 2018 ©
+        <a href="#" style="font-family: 'Bai Jamjuree' !important; color:white">weatherworld.tn</a>
+        All right reserved.
+        Developed by
+        <a href="#" style="font-family: 'Bai Jamjuree' !important; color: white">5 Points The Talent Pool</a>
+      </p>
+    </div>
   </div>
- 
+</div>
